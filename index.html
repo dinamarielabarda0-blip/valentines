@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: pink;">
+    <div>
+        <h1>Will you be my valentine?❤️</h1>
+        <button id="Yes">Yes!</button>
+        <button id="No">No</button>
+    </div>
+
+    <style>
+        h1 {
+            font-size: 50px;
+        }
+
+        button {
+
+            font-size: 15px;
+            padding: 5px;
+
+        }
+
+        div {
+            margin-top: 200px;
+            text-align: center;
+            vertical-align: middle;
+            ;
+        }
+
+        #No {
+
+            margin-left: 5px;
+            position: absolute;
+        }
+
+        #Yes:hover{
+            background-color: #ff0000;
+            animation: pulse 0.5s infinite;
+        }
+
+        #Yes {
+            animation: pulse 1.2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    <script>
+        document.getElementById("Yes").addEventListener("click", function () {
+            alert("I love you! See you soon ❤️");
+        });
+        var b = document.getElementById("No")
+        b.addEventListener("mouseover", change);
+        function change() {
+            var i = Math.floor(Math.random() * 1000) + 1;
+            var j = Math.floor(Math.random() * 700) + 1;
+            b.style.left = i + "px";
+            b.style.top = j + "px";
+        }
+    </script>
+
+</body>
+
+</html>
